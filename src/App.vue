@@ -6,6 +6,7 @@
 
 <script>
 import CountriesList from "./components/CountriesList.vue";
+import Country from "./components/Country.vue";
 
 export default {
   name: "App",
