@@ -1,6 +1,8 @@
 <template>
   <div>
-    <li v-on:click="countryInfo">{{ country.name }}</li>
+    <option v-on:click="countryInfo">{{ country.name }}</option>
+
+    <!-- <li v-on:click="countryInfo">{{ country.name }}</li> -->
   </div>
 </template>
 
