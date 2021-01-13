@@ -1,7 +1,7 @@
 <template>
-<div>
-    <li>{{ country.capital }}</li>
-    <li>{{ country.population }}</li>
+  <div v-if="country">
+    <p>{{ country.capital }}</p>
+    <p>{{ country.population }}</p>
   </div>
 </template>
 
