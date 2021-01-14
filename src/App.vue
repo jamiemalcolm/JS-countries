@@ -1,9 +1,8 @@
 <template>
-  <div>
-    <div class="main-container">
-      <countries-list :countries="countries"></countries-list>
-      <country-info :country="selectedCountry"></country-info>
-    </div>
+  <div class="main-container">
+    <!-- <countries-drop-down :countries="countries"></countries-drop-down> -->
+    <countries-list :countries="countries"></countries-list>
+    <country-info :country="selectedCountry"></country-info>
   </div>
 </template>
 
@@ -11,6 +10,7 @@
 import { eventBus } from "./main.js";
 import CountriesList from "./components/CountriesList.vue";
 import CountryInfo from "./components/CountryInfo.vue";
+import CountriesDropDown from "./components/CountriesDropDown.vue";
 
 export default {
   name: "App",
@@ -23,6 +23,7 @@ export default {
   components: {
     "countries-list": CountriesList,
     "country-info": CountryInfo,
+    "countries-drop-down": CountriesDropDown,
   },
   mounted() {
     fetch("https://restcountries.eu/rest/v2/all")

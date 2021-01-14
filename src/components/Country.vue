@@ -1,9 +1,7 @@
 <template>
-  <div>
-    <option v-on:click="countryInfo">{{ country.name }}</option>
-
-    <!-- <li v-on:click="countryInfo">{{ country.name }}</li> -->
-  </div>
+  <option v-bind="country" v-on:click="countryInfo">{{ country.name }}</option>
+  <!--  -->
+  <!-- <li v-on:click="countryInfo">{{ country.name }}</li> -->
 </template>
 
 <script>
@@ -18,6 +16,7 @@ export default {
       eventBus.$emit("country-selected", this.country);
     },
   },
+  components: {},
 };
 </script>
 
